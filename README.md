@@ -2,19 +2,13 @@
 
 **This requires react-native **0.43** or higher.**
 
-It can be installed via git://..., http://..., file://... or any other URL supported by npm.
+The default install will be via npm/yarn using the template name:
 
-The default will be Installed via npm/yarn:
+$`react-native init <new project name> --template quickstart`
 
-$`react-native init --template quickstart <new project name>`
+It can also be installed via https:
 
-File
-
-$`react-native init --template file://quickstart-template-folder <new project name>`
-
-Https
-
-$`react-native init --template https://github.com/kevinold/react-native-template-quickstart.git <new project name>`
+$`react-native init <new project name> --template https://github.com/kevinold/react-native-template-quickstart`
 
 ### Things to do after init
 
