@@ -1,0 +1,43 @@
+{
+	"name": "react-native-template-quickstart",
+	"version": "0.0.1",
+	"description": "Quick Start react-native starter template",
+	"scripts": {
+		"lint": "eslint './src/**/*.js'",
+		"clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
+		"clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
+		"newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && yarn cache clean && yarn install",
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"android:em": "emulator -avd reactnative",
+		"android:build": "cd android && ./gradlew assembleRelease",
+		"android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
+		"android:hockeyapp": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
+		"android:devices": "$ANDROID_HOME/platform-tools/adb devices",
+		"android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
+		"android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
+		"android:kill": "adb kill-server",
+		"test": "jest",
+    "haul": "haul start",
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kevinold/react-native-template-quickstart.git"
+	},
+	"keywords": [
+		"react",
+		"react-native",
+		"template",
+		"starter",
+		"boilerplate",
+		"kit"
+	],
+	"author": "Kevin Old",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kevinold/react-native-template-quickstart/issues"
+	},
+	"homepage": "https://github.com/kevinold/react-native-template-quickstart#readme",
+	"jest": {
+		"preset": "react-native"
+	}
+}
