@@ -1,1 +1,1 @@
-export const APP_INIT = '';
+export const APP_INIT = "App/Init";
